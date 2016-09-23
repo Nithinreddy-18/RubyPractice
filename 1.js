@@ -13,6 +13,10 @@ var b = Number(a);
 console.log(a);
 console.log(b);
 
+
+console.log(x === undefined); // true
+var x = 3;
+
 //loops
 while(1<0){
   console.log("How may i help you?");
@@ -28,3 +32,20 @@ for(var i=0; i<=9; i=i+1){
   console.log(i);
 }
 
+lebel :
+while(1>0 == true)
+{
+  console.log("true")
+
+break;
+}
+
+var i = 0;
+var n = 0;
+while (i < 5) {
+  i++;
+  if (i == 3) {
+    continue;
+  }
+  console.log(i)
+}
