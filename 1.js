@@ -49,3 +49,23 @@ while (i < 5) {
   }
   console.log(i)
 }
+
+
+var n = prompt("Enter a number to find odd or even", "Type your number here");
+n = parseInt(n);
+if (isNaN(n))
+{
+alert("Please Enter a Number");
+}
+else if (n == 0)
+{
+alert("The number is zero");
+}
+else if (n%2)
+{
+alert("The number is odd");
+}
+else
+{
+alert("The number is even");
+}

@@ -112,3 +112,41 @@ inst_section = {
   native: 'string'
  }
  p inst_section
+
+countries = {
+  "ind" => "India",
+  "ger" => "Germany",
+  "spa" => "Spain",
+  "fra" => "France",
+  "uk" => "United Kingdom",
+  "us" => "Unted States",
+}
+ newcountries = countries.invert
+ puts newcountries.keys.inspect
+ puts newcountries.values.inspect
+ puts newcountries.inspect
+ 
+ names = Hash.new
+  names[1] = "nithin"
+  names[2] = "reddy"
+  names[3] = "pawan"
+  names[4] = "gowtham"
+  names[5] = "prathap"
+ puts names
+ names.delete(5)
+ puts names
+ names.shift
+ puts names
+ names.delete_if{|key, value| key == 2}
+ puts names.inspect
+
+#Random numbers in ruby
+
+puts rand 
+puts (0..5).map{rand(0..10)}
+
+#srand
+srand 1234
+puts rand,rand
+srand 1234
+puts rand,rand
