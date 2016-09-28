@@ -140,6 +140,7 @@ This example demonstrates the if..else if...else statement.
 </body>
 </html>
 
+<!--For loop -->
 <html>
 <body>
 <script type="text/javascript">
@@ -152,5 +153,69 @@ document.write("<br />");
 </body>
 </html>
 
+<html>
+<body>
+<script type="text/javascript">
+var book = "maths";
+if( book == "history" ){
+document.write("<b>History Book</b>");
+}else if( book == "maths" ){
+document.write("<b>Maths Book</b>");
+}else if( book == "economics" ){
+document.write("<b>Economics Book</b>");
+}else{
+document.write("<b>Unknown Book</b>");
+}
+</script>
+</body>
+</html>
 
+<!--Switch Statement with Break!-->
+<html>
+<body>
+<script type="text/javascript">
+var grade='A';
+document.write("Entering switch block<br />");
+switch (grade)
+{
+case 'A': document.write("Good job<br />");
+break;
+case 'B': document.write("Pretty good<br />");
+break;
+case 'C': document.write("Passed<br />");
+break;
+case 'D': document.write("Not so good<br />");
+break;
+case 'F': document.write("Failed<br />");
+break;
+default:
+document.write("Unknown grade<br />")
+}
+document.write("Exiting switch block");
+</script>
+</body>
+</html>
+
+<!-- Switch Statement with out Break!-->
+<html>
+<body>
+<script type="text/javascript">
+
+var grade='A';
+document.write("Entering switch block<br />");
+switch (grade)
+{
+case 'A': document.write("Good job<br />");
+case 'B': document.write("Pretty good<br />");
+case 'C': document.write("Passed<br />");
+case 'D': document.write("Not so good<br />");
+case 'F': document.write("Failed<br />");
+default:
+document.write("Unknown grade<br />")
+}
+document.write("Exiting switch block");
+
+</script>
+</body>
+</html>
 

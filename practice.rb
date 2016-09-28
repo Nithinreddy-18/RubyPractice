@@ -150,3 +150,105 @@ srand 1234
 puts rand,rand
 srand 1234
 puts rand,rand
+
+#NEXT & REDO statements
+for i in 0..5
+  if i<2
+    next
+  end
+  puts "The value of local variable i = #{i}"
+end
+
+=begin
+for i in 0..5
+  if i<2
+    puts "The value of local variable i = #{i}"
+    redo
+  end
+end
+=end
+ puts "The above redo prgm produces infinite loop"
+
+#Blocks & Yield with and without parameters
+ def name
+    puts "you are in the Method."
+    yield
+  end
+  name{
+    puts "you are in the Block."
+  }
+
+def name
+  puts "you are in the Method."
+  yield 5
+end
+name{
+|i|puts "you are in the Block #{i}."
+}
+
+#code of passing Block to a Method
+def met(&b)
+  #yield
+  b.call
+  3.times do (b.call) end
+end
+met{
+  puts "Hello World!!!"
+}
+
+ #ruby BEGIN & END Block
+
+ def test
+  puts "This is a Method........................................"
+end
+test
+
+BEGIN {
+    puts "This is executed at the begining."
+  }
+END {
+    puts "This is executed at the end."
+  }
+
+#Modules
+module Trig
+  PI = 3.1416
+def Trig.sinfunc(x)
+  puts Math.sin(x)
+end
+def Trig.cosfunc(x)
+  puts Math.cos(x)
+  end
+end 
+puts Trig::PI
+puts Trig.sinfunc(1)
+
+module Trig
+  
+def Trig.sinfunc(x)
+  puts Math.sin(x)
+end
+def Trig.cosfunc(x)
+  puts Math.cos(x)
+  end
+end 
+module Moral
+  Bad = 1
+  Very_bad = 0
+  def Moral.sinfunc(badnesslevel)
+    if(badnesslevel == 0)
+      puts "you are Very bad"
+    else
+      puts "you are just Bad"
+    end
+  end
+end
+
+puts Trig.sinfunc(0)
+puts Moral.sinfunc(Moral::Very_bad)
+
+
+
+
+
+
