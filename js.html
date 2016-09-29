@@ -73,6 +73,7 @@ will be a string.</p>
 </body>
 </html>
 
+
 <html>
 <body>
 <script type="text/javascript">
@@ -140,18 +141,93 @@ This example demonstrates the if..else if...else statement.
 </body>
 </html>
 
+
+<html>
+<body>
+  <script type ="text/javascript">
+    i = 0;
+    while(i<=5)
+    {
+      document.write("This is a while loop:-");
+      document.write("The number is " +i);
+      document.write("<br />");
+      i++;
+    }
+</script>
+</body>
+</html>
+
+
+<html>
+<body>
+  <script type ="text/javascript">
+  i = 0;
+  do
+  {
+    document.write("This is a do..while loop:-");
+    document.write("The number is " +i);
+    document.write("<br/>");
+    i++
+  }while(i<=4)
+  </script>
+  </body>
+</html>
+
+
 <!--For loop -->
 <html>
 <body>
 <script type="text/javascript">
 for (i = 0; i <= 5; i++)
 {
+  document.write("This is a for loop:-")
 document.write("The number is " + i);
 document.write("<br />");
 }
 </script>
 </body>
 </html>
+
+
+
+<!-- break statement -->
+
+<html>
+<body>
+  <script type ="text/javascript">
+  for (i=0; i<=10; i++)
+  {
+    if(i == 3)
+    {
+      break;
+    }
+document.write("The number is " +i);
+document.write("<br/>")
+  }
+  </script>
+</body>
+</html>
+
+
+<!-- continue statement -->
+
+<html>
+<body>
+  <script type ="text/javascript">
+  for (i=0; i<=10; i++)
+  {
+    if(i == 3)
+    {
+      continue;
+    }
+document.write("The number is " +i);
+document.write("<br/>")
+  }
+  </script>
+</body>
+</html>
+
+
 
 <html>
 <body>
@@ -170,7 +246,7 @@ document.write("<b>Unknown Book</b>");
 </body>
 </html>
 
-<!--Switch Statement with Break!-->
+<!--Switch Statement with break!-->
 <html>
 <body>
 <script type="text/javascript">
@@ -196,7 +272,9 @@ document.write("Exiting switch block");
 </body>
 </html>
 
-<!-- Switch Statement with out Break!-->
+
+
+<!-- Switch Statement with out break!-->
 <html>
 <body>
 <script type="text/javascript">

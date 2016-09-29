@@ -166,8 +166,10 @@ for i in 0..5
     redo
   end
 end
-=end
- puts "The above redo prgm produces infinite loop"
+=end 
+puts "The above redo prgm produces infinite loop!"
+
+
 
 #Blocks & Yield with and without parameters
  def name
@@ -186,6 +188,9 @@ name{
 |i|puts "you are in the Block #{i}."
 }
 
+
+
+
 #code of passing Block to a Method
 def met(&b)
   #yield
@@ -195,6 +200,8 @@ end
 met{
   puts "Hello World!!!"
 }
+
+ 
 
  #ruby BEGIN & END Block
 
@@ -210,6 +217,8 @@ END {
     puts "This is executed at the end."
   }
 
+
+
 #Modules
 module Trig
   PI = 3.1416
@@ -223,9 +232,10 @@ end
 puts Trig::PI
 puts Trig.sinfunc(1)
 
+
+
 module Trig
-  
-def Trig.sinfunc(x)
+  def Trig.sinfunc(x)
   puts Math.sin(x)
 end
 def Trig.cosfunc(x)
@@ -249,6 +259,42 @@ puts Moral.sinfunc(Moral::Very_bad)
 
 
 
+#Methods overriding
+class ParentBox
+  def initialize(h,w)
+    @height,@width = h,w
+  end
+  def getarea
+    puts "The area of the ParentBox is  #{@height*@width+100}"
+  end
+end
+class ChildBox < ParentBox
+  def getarea
+    puts super()
+    puts "The area of the ChildBox is #{@height*@width}"
+  end
+  end
+  childobject = ChildBox.new(20,10)
+  puts childobject.getarea
 
+
+
+#Operator Overloading
+class Tester1
+ def initialize x
+   @x = x
+ end
+
+ def +(y)
+   @x + y
+ end
+end
+
+a = Tester1.new 5
+puts(a + 3)
+# => 8
+a += 7
+puts a
+# => 12
 
 
