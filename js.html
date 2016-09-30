@@ -291,9 +291,113 @@ case 'F': document.write("Failed<br />");
 default:
 document.write("Unknown grade<br />")
 }
-document.write("Exiting switch block");
+document.write("Exiting switch block<br />");
 
 </script>
 </body>
 </html>
 
+
+
+<!--Alert box-->
+<html>
+<body>
+<script type="text/javascript">
+function show_alert()
+{
+alert("Hello! I am an alert box!");
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="show_alert()" value="Show
+alert box" />
+</body>
+</html>
+
+
+
+<!--confirm box-->
+<html>
+<head>
+<script type="text/javascript">
+function show_confirm()
+{
+var r=confirm("Press a button!");
+if (r==true)
+{
+alert("You pressed OK!");
+}
+else
+{
+alert("You pressed Cancel!");
+}
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="show_confirm()" value="Show a
+confirm box" />
+</body>
+</html>
+
+
+
+<!--prompt box-->
+<html>
+<head>
+<script type="text/javascript">
+function disp_prompt()
+{
+var fname=prompt("Please enter your name:","Your name")
+document.getElementById("msg").innerHTML="Greetings, " +
+fname
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="disp_prompt()" value="Display
+a prompt box" />
+<br /><br />
+<div id="msg"></div>
+</body>
+</html>
+
+
+
+<html>
+<head>
+<script type="text/javascript">
+function displaymessage()
+{
+alert("Hello World!");
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" value="Click me!"
+onclick="displaymessage()" />
+</form>
+<p>By pressing the button above, a function will be called.
+The function will alert a message.</p>
+</body>
+</html>
+
+
+
+<html>
+<head>
+<script type="text/javascript">
+function myFunction()
+{
+return ("Hello world!");
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+document.write(myFunction())
+</script>
+</body>
+</html>

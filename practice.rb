@@ -297,4 +297,64 @@ a += 7
 puts a
 # => 12
 
+#freezing objects
+class Mouse
+  attr_accessor:tail_length,:height
+def initialize(t,h)
+  @tail_length=t
+  @height=h
+end
+end
+mouse = Mouse.new(5,10)
+puts mouse.tail_length
+puts mouse.height
+
+mouse.freeze
+if(mouse.frozen?)
+  puts "yes...mouse is frozen"
+else
+  puts "mouse is free to use"
+end
+
+#mouse.tail_length=6
+#mouse.height=12
+puts mouse.tail_length
+puts mouse.height
+
+
+#Proc & Lambda 
+#4 ways to create a Proc object
+#1.Proc.new
+
+proc_object = Proc.new{puts "I am a proc object.."}
+proc_object.call
+
+
+
+#2.using the proc method in kernol module
+
+proc_object = proc{ puts "I'm inside the proc.."}
+proc_object.call
+puts "Is a proc object a lambda - #{proc_object.lambda?}"
+
+
+
+#3.Using kernal lambda methods
+
+proc_object = lambda{ puts "I'm inside the lambda.."}
+proc_object.call
+puts "Is a proc object a lambda - #{proc_object.lambda?}"
+
+#Implicit way-two ways
+#1.Using yield statement
+#2.using concept of &Block
+def my_method(&my_block)
+  puts "hello method"
+  my_block.call
+  return my_block
+end
+block_var = my_method{puts "hello block"}
+block_var.call
+
+
 
