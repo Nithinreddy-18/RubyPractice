@@ -356,5 +356,36 @@ end
 block_var = my_method{puts "hello block"}
 block_var.call
 
+#Date and Time
+time1 = Time.new
+puts "current time : " + time1.inspect
 
 
+time = Time.new
+puts "Current time : " + time.inspect
+
+puts time.year
+puts time.month
+puts time.day
+puts time.wday
+puts time.yday
+puts time.hour
+puts time.min
+puts time.sec
+puts time.usec
+puts time.zone
+
+#Iterators
+array = [1,2,3,4,5]
+array.each do |i| 
+  puts i
+end
+
+a = [5,4,3,2,1]
+b = a.collect {|c| c*10}
+puts b
+
+range1 = (0..10).to_a
+range2 = (10...20).to_a
+puts "#{range1}"
+puts "#{range2}"
