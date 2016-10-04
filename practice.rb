@@ -389,3 +389,72 @@ range1 = (0..10).to_a
 range2 = (10...20).to_a
 puts "#{range1}"
 puts "#{range2}"
+
+
+#Initialize method or Constructor
+class Rectangle
+  def initialize(l,b)
+    @length, @breadth = l,b
+
+  end
+end
+
+rect = Rectangle.new(20,10)
+puts rect
+
+#Getter/Accessor method
+class Rectangle
+  def initialize(l,b)
+    @length,@breadth = l,b
+
+  end
+  def getLength
+    return @length
+  end
+  def getBreadth
+    return @breadth
+  end
+  def calArea
+    return @length * @breadth
+  end
+end
+rect = Rectangle.new(50,30)
+x = rect.getLength
+y = rect.getBreadth
+area = rect.calArea
+puts "The length of the Rectangle is : #{x}"
+puts "The breadth of the Rectangle is : #{y}"
+puts "The area is : #{area}"
+
+
+#Setter method
+class Rectangle
+  def initialize(l,b)
+    @length,@breadth = l,b
+
+  end
+  def getLength
+    return @length
+  end
+  def getBreadth
+    return @breadth
+  end
+  def setLength=(value)
+    @length = value
+  end
+  def setBreadth=(value)
+    @breadth = value
+  end
+  def calArea
+    return @length * @breadth
+  end
+end
+rect = Rectangle.new(50,30)
+rect.setLength = 100
+rect.setBreadth = 60
+x = rect.getLength
+y = rect.getBreadth
+area = rect.calArea
+puts "The length of the Rectangle is : #{x}"
+puts "The breadth of the Rectangle is : #{y}"
+puts "The area is : #{area}"
